@@ -203,6 +203,29 @@ CLIENT-PUREPAW-main/
 - **MongoDB** >= 6.x (local hoặc MongoDB Atlas)
 - **npm** >= 9.x
 
+---
+
+### 💾 Hướng dẫn thiết lập Database (MongoDB)
+
+Bạn cần có MongoDB để chạy dự án. Tham khảo 1 trong 2 cách sau:
+
+#### Cách 1: Chạy MongoDB Local (Khuyên dùng cho máy tính cá nhân)
+1. Tải và cài đặt **[MongoDB Community Server](https://www.mongodb.com/try/download/community)** (cứ Next mặc định).
+2. Tải thêm **[MongoDB Compass](https://www.mongodb.com/try/download/compass)** (nếu muốn có giao diện GUI dễ nhìn để quản lý data).
+3. Dịch vụ MongoDB sẽ tự động chạy ngầm trên máy bạn. Chuỗi kết nối của bạn sẽ luôn là:  
+   👉 `mongodb://localhost:27017/purepaw`
+
+#### Cách 2: Dùng MongoDB Atlas (Cloud - Không cần cài đặt)
+1. Tạo 1 tài khoản miễn phí tại **[MongoDB Atlas](https://www.mongodb.com/atlas)**.
+2. Tạo 1 Cluster mới (chọn gói **M0 Free**).
+3. Tại menu **Database Access**, tạo 1 user mới (lưu lại username và password).
+4. Tại menu **Network Access**, nhấn Add IP Address → chọn **Allow Access from Anywhere** (0.0.0.0/0) để không bị chặn kết nối.
+5. Quay lại menu **Database**, nhấn **Connect** → **Drivers** → Copy đường dẫn URL.
+6. Thay thế `<password>` bằng mật khẩu ở bước 3.  
+   👉 Ví dụ đường dẫn của bạn: `mongodb+srv://user123:matkhaucuaBan@cluster0.abcde.mongodb.net/purepaw`
+
+---
+
 ### Bước 1 — Cài dependencies
 
 ```bash
